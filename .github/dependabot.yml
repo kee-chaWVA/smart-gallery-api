@@ -5,8 +5,15 @@ updates:
   schedule:
     interval: weekly
   open-pull-requests-limit: 10
+  # One weekly PR for all minor/patch gem updates; majors still get their own PR.
+  groups:
+    minor-and-patch:
+      update-types: [ "minor", "patch" ]
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
     interval: weekly
   open-pull-requests-limit: 10
+  groups:
+    minor-and-patch:
+      update-types: [ "minor", "patch" ]
