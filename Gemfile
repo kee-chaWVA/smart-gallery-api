@@ -33,7 +33,7 @@ gem "kamal", require: false
 gem "thruster", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 2.2"
 # Required directly by config/initializers/active_storage.rb (Vips.block_untrusted, CVE-2026-66066).
 # image_processing 2.x no longer depends on it, so declare it here. block_untrusted needs >= 2.2.1.
 gem "ruby-vips", ">= 2.2.1"
