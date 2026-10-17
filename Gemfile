@@ -40,6 +40,11 @@ gem "aws-sdk-s3", require: false
 
 # HTTP client used to call the Python ML service
 gem "faraday"
+# Lets Faraday upload files (multipart/form-data), used to send photos to the ML service
+gem "faraday-multipart"
+
+# pgvector support: vector columns and nearest-neighbor queries for CLIP embeddings
+gem "neighbor"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
