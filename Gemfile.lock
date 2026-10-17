@@ -433,6 +433,7 @@ DEPENDENCIES
   rails (~> 8.1.4)
   rspec-rails
   rubocop-rails-omakase
+  ruby-vips (>= 2.2.1)
   sidekiq
   sidekiq-cron
   solid_cable
