@@ -55,7 +55,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres
+        image: pgvector/pgvector:pg17-trixie
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -84,7 +84,11 @@ jobs:
       - name: Run tests
         env:
           RAILS_ENV: test
-          DATABASE_URL: postgres://postgres:postgres@localhost:5432
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_NAME: smart_gallery_test
+          DB_USERNAME: postgres
+          DB_PASSWORD: postgres
           # RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
           # REDIS_URL: redis://localhost:6379/0
-        run: bin/rails db:test:prepare test
+        run: bin/rails db:test:prepare && bundle exec rspec
