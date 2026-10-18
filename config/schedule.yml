@@ -1,3 +1,4 @@
 photo_discovery:
-  cron: "0 0,12 * * *"
+  # Every 5 minutes, matching the Mac-side Photos sync interval.
+  cron: "*/5 * * * *"
   class: "PhotoDiscoveryJob"
